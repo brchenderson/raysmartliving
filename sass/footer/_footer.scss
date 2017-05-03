@@ -1,0 +1,54 @@
+footer{
+  background-color: $ray_darkgray;
+  font-family: "Gotham Light", sans-serif;
+  color: white;
+  padding: 15px;
+}
+.site-info{
+  width: 100%;
+}
+.site-info--item{
+  display: block;
+  width: 100%;
+  text-align: center;
+  @include media('>=tablet'){
+    float: left;
+  }
+  &.social{
+    a{
+      color: white;
+      padding: 0 10px;
+      &:hover{
+        color: $ray_verylightgray;
+      }
+    }
+    &:after{
+      border-bottom: 1px solid $ray_grayborder;
+      content: "";
+      display: block;
+      margin: 20px auto;
+      width: 33%;
+    }
+    @include media('>=tablet'){
+      border-bottom: 0;
+      text-align: right;
+      width:(100% / 4) - ($grid-spacing * 9 / 12);
+      &:after{
+        display: none;
+      }
+    }
+  }
+  &.address{
+    @include media('>=tablet'){
+      margin-bottom: 0;
+      width:(100% / 2) - ($grid-spacing * 6 / 12);
+    }
+  }
+  &.phone{
+    @include media('>=tablet'){
+      margin-bottom: 0;
+      text-align: left;
+      width:(100% / 4) - ($grid-spacing * 9 / 12);
+    }
+  }
+}

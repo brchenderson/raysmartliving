@@ -1,0 +1,178 @@
+.section__features--item{
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  & + & {
+    margin-top: 0;
+  }
+  &.white-start{
+    color: white;
+    @include media('>=tablet'){
+      color: black;
+      .section__features--heading{
+        color: $ray_yellowgreen;
+      }
+    }
+  }
+  &.yellowgreen-start{
+    color: white;
+  }
+  @include media('>=tablet'){
+    display: flex;
+  }
+}
+.section__features--text{
+  background-color: $ray_yellowgreen;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  text-align: center;
+  vertical-align: middle;
+  &.odd{
+    @include media('>=tablet'){
+      text-align: right;
+    }
+  }
+  &.even{
+    @include media('>=tablet'){
+      text-align: left;
+    }
+  }
+  &.yellowgreen-start{
+    @include media('>=tablet'){
+      background-color: $ray_yellowgreen;
+    }
+  }
+  &.white-start{
+    @include media('>=tablet'){
+      background-color: white;
+    }
+  }
+  p{
+    margin-bottom: 0;
+  }
+  &:after{
+    transform: rotate(315deg);
+    -ms-transform: rotate(315deg); /* IE 9 */
+    -webkit-transform: rotate(315deg); /* Safari and Chrome */
+    -o-transform: rotate(315deg); /* Opera */
+    -moz-transform: rotate(315deg); /* Firefox */
+    background-color: $ray_yellowgreen;
+    width:35px;
+    height:35px;
+    position:absolute;
+    left: 50%;
+    top: -18px;
+    margin-left: -18px;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+    content: "";
+  }
+  @include media('>=tablet'){
+      flex: 1;
+      height: 325px;
+      padding: 0 10%;
+      width:(100% / 1.5) - ($grid-spacing * 4 / 12);
+      &.even{
+        order: 2;
+      }
+      &.odd{
+        order: 1;
+      }
+      &:after{
+        border: 0;
+        display: none;
+      }
+  }
+}
+.section__features--image{
+  //background-attachment: fixed;
+  background-position: center; //TBD
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  width: 100%;
+  @include media('>=tablet'){
+      height: 325px;
+      display: inline-block;
+      order: 2;
+      width:(100% / 3) - ($grid-spacing * 8 / 12);
+      &.even{
+        order: 1;
+        &:after{
+          transform: rotate(225deg);
+          -ms-transform: rotate(225deg); /* IE 9 */
+          -webkit-transform: rotate(225deg); /* Safari and Chrome */
+          -o-transform: rotate(225deg); /* Opera */
+          -moz-transform: rotate(225deg); /* Firefox */
+          width:75px;
+          height:75px;
+          position:absolute;
+          top: 50%;
+          right: -38px;
+          margin-top: -38px;
+          -webkit-border-radius: 0 10px 0 0;
+          -moz-border-radius: 0 10px 0 0;
+          border-radius: 0 10px 0 0;
+          content: "";
+          z-index: 2;
+        }
+      }
+      &.odd{
+        order: 2;
+        &:after{
+          transform: rotate(45deg);
+          -ms-transform: rotate(45deg); /* IE 9 */
+          -webkit-transform: rotate(45deg); /* Safari and Chrome */
+          -o-transform: rotate(45deg); /* Opera */
+          -moz-transform: rotate(45deg); /* Firefox */
+          width:75px;
+          height:75px;
+          position:absolute;
+          top: 50%;
+          left: -38px;
+          margin-top: -38px;
+          -webkit-border-radius: 0 10px 0 0;
+          -moz-border-radius: 0 10px 0 0;
+          border-radius: 0 10px 0 0;
+          content: "";
+        }
+      }
+      &.yellowgreen-start{
+        &:after{
+          background-color:$ray_yellowgreen;
+        }
+      }
+      &.white-start{
+        &:after{
+          background-color:$white;
+        }
+      }
+  }
+}
+
+
+.section__features--heading{
+  font-family: "Gotham Bold", sans-serif;
+  margin: 0;
+  width: 100%;
+  @include font-size(2);
+  z-index: 5;
+  @include media('>=tablet'){
+      @include font-size(3.125);
+  }
+}
+
+.section__features--description{
+  font-family: "Gotham Light", sans-serif;
+  width: 100%;
+  @include font-size(1.25);
+  margin: 0 auto;
+  @include media('>=tablet'){
+    @include font-size(1.5);
+  }
+}

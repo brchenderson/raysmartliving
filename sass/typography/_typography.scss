@@ -1,0 +1,23 @@
+@include font-face('Gotham Book', '../fonts/Gotham-Book', null, null, eot woff ttf svg);
+@include font-face('Gotham Bold', '../fonts/GothamBold', bold, null, eot woff ttf svg);
+@include font-face('Gotham Light', '../fonts/Gotham-Light', null, null, eot woff ttf svg);
+@include font-face('Gotham Medium', '../fonts/Gotham-Medium',null, null, eot woff ttf svg);
+
+
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+
+
+@import "headings";
+
+@import "copy";

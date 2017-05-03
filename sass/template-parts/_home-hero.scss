@@ -1,0 +1,21 @@
+.section__home-hero{
+  background-attachment: fixed;
+  background-size: contain;
+  display: none;
+  text-align: center;
+  padding: 10% 25%;
+  width: 100%;
+  @include media('>tablet'){
+    display: block;
+  }
+}
+.section__home-hero--reservations{
+  color: white;
+  font-family: "Gotham Light", sans-serif;
+  @include font-size(1);
+  font-weight: 100;
+  margin: 10px 0 0;
+  @include media('>tablet'){
+    @include font-size(2);
+  }
+}
