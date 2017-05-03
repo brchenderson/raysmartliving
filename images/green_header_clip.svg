@@ -1,0 +1,7 @@
+<svg>
+  <defs>
+    <clipPath id="feature-arrow-down" clipPathUnits="objectBoundingBox">
+      <path class="cls-1" d="M1170.92,0H0V127.36H544.8l32,32a12.24,12.24,0,0,0,17.31,0l32-32h544.8Z"/>
+    </clipPath>
+  </defs>
+</svg>

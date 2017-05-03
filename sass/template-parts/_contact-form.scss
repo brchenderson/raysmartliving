@@ -1,0 +1,58 @@
+.section__contact-form{
+  margin: 0 auto;
+  width: 83%;
+  label{
+    display: block;
+    font-family: "Gotham Light", sans-serif;
+    @include font-size(1.25);
+    line-height: 2em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    input, select, .wpcf7-text{
+      width: 100%;
+    }
+    &.half{
+      @include media('>tablet'){
+        display: inline-block;
+        width: 49%;
+      }
+    }
+    &.right{
+      @include media('>tablet'){
+        padding-left: 40px;
+      }
+    }
+    &.other{
+      display: none;
+    }
+    &.left{
+      @include media('>tablet'){
+        padding-right: 40px;
+      }
+    }
+    &:after{
+      @include clearfix();
+    }
+  }
+  br{
+    display: none;
+  }
+}
+.section__contact-form--headline{
+    @include font-size(1.125);
+    text-transform: none;
+}
+.section__contact-form--intro{
+  b, strong{
+    font-family: "Gotham Bold", sans-serif;
+  }
+}
+input[type="submit"].wpcf7-submit{
+  background-color: $ray_yellowgreen;
+  color: white;
+  @include font-size(1.25);
+  border-radius: 0;
+  margin-bottom: 100px;
+  padding: 15px 10%;
+  text-transform: uppercase;
+}

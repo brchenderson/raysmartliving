@@ -1,0 +1,40 @@
+.section__hero{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-bottom: 40%;
+  position: relative;
+}
+
+.section__hero--title{
+  background-color: $ray_yellowgreen_translucent;
+  bottom: 35px;
+  color: white;
+  font-family: "Gotham Bold", sans-serif;
+  margin: 0;
+  padding: 15px 0 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+  @include media('>tablet'){
+      @include font-size(3.125);
+      padding: 50px 0;
+  }
+}
+
+.section__hero--arrow-down{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.section__hero--arrow-down-spacing{
+  flex: 1 1 auto;
+  &.caret_white{
+    background-color: white;
+  }
+  &.caret_gray{
+    background-color: $ray_darkgray;
+  }
+}
